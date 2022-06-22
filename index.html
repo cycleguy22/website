@@ -1,22 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="myCode.css">
-    <script src="gittalk_plugin.js"></script>
-</head>
-<body>
-    <div id = "gitalk-container">
-        
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>    
-    
-    
-    
-    </div>
 
+<head>
+  <!-- style sheet of Vssue -->
+  <link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css">
+</head>
+
+<body>
+  <div id="vssue"></div>
+
+  <!-- Introduce Vue first -->
+
+  <!-- vue runtime build (runtime only)  -->
+  <script src="https://unpkg.com/vue/dist/vue.runtime.min.js"></script>
+  <!-- OR: vue full build (runtime + compiler)  -->
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+
+  <!-- Introduce Vssue after Vue -->
+
+  <!-- Vssue Github build -->
+  <script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script>
+  <!-- OR: Vssue Gitlab build -->
+  <script src="https://unpkg.com/vssue/dist/vssue.gitlab.min.js"></script>
+  <!-- OR: Vssue Bitbucket build -->
+  <script src="https://unpkg.com/vssue/dist/vssue.bitbucket.min.js"></script>
+  <!-- OR: Vssue Gitee build -->
+  <script src="https://unpkg.com/vssue/dist/vssue.gitee.min.js"></script>
+  <!-- OR: Vssue Gitea build -->
+  <script src="https://unpkg.com/vssue/dist/vssue.gitea.min.js"></script>
+
+  <!-- Use Vssue as a Vue component -->
+
+  <!-- use render function for vue runtime build -->
+  <script>
+    new Vue({
+      el: '#vssue',
+
+      render: h => h('Vssue', {
+        props: {
+          // here set the title of issue of current page
+          title: 'Vssue Dev',
+
+          // here set the options for your OAuth App
+          options: {
+            owner: 'OWNER_OF_REPO',
+            repo: 'NAME_OF_REPO',
+            clientId: 'YOUR_CLIENT_ID',
+            clientSecret: 'YOUR_CLIENT_SECRET', // only required for some of the platforms
+          },
+        }
+      })
+    })
+  </script>
+
+  <!-- OR: use template for vue full build -->
+  <script>
+    new Vue({
+      el: '#vssue',
+
+      data: {
+        title: 'Vssue Dev',
+
+        options: {
+          owner: 'OWNER_OF_REPO',
+          repo: 'NAME_OF_REPO',
+          clientId: 'YOUR_CLIENT_ID',
+          clientSecret: 'YOUR_CLIENT_SECRET', // only required for some of the platforms
+        },
+      },
+
+      template: `<vssue :title="title" :options="options"></vssue>`,
+    })
+  </script>
+</body>    
     
     
     
     
-</body>
+    
 </html>
