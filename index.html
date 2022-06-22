@@ -43,35 +43,17 @@
 
           // here set the options for your OAuth App
           options: {
-            owner: 'OWNER_OF_REPO',
-            repo: 'NAME_OF_REPO',
-            clientId: 'YOUR_CLIENT_ID',
-            clientSecret: 'YOUR_CLIENT_SECRET', // only required for some of the platforms
+            owner: 'cycleguy22',
+            repo: 'website',
+            clientId: '21d1a5313bdc1d36e848',
+            clientSecret: 'a35244a4cf1000c7e8a86ee8b32e7ccce3d87a12', // only required for some of the platforms
           },
         }
       })
     })
   </script>
 
-  <!-- OR: use template for vue full build -->
-  <script>
-    new Vue({
-      el: '#vssue',
-
-      data: {
-        title: 'Vssue Dev',
-
-        options: {
-          owner: 'OWNER_OF_REPO',
-          repo: 'NAME_OF_REPO',
-          clientId: 'YOUR_CLIENT_ID',
-          clientSecret: 'YOUR_CLIENT_SECRET', // only required for some of the platforms
-        },
-      },
-
-      template: `<vssue :title="title" :options="options"></vssue>`,
-    })
-  </script>
+  
 </body>    
     
     
