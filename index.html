@@ -7,44 +7,7 @@
 </head>
 
 <body>
-  <div id="vssue"></div>
-
-  <!-- Introduce Vue first -->
-
-  <!-- vue runtime build (runtime only)  -->
-  <script src="https://unpkg.com/vue/dist/vue.runtime.min.js"></script>
-  <!-- OR: vue full build (runtime + compiler)  -->
-  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
-
-  <!-- Introduce Vssue after Vue -->
-
-  <!-- Vssue Github build -->
-  <script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script>
-
-  <!-- Use Vssue as a Vue component -->
-
-  <!-- use render function for vue runtime build -->
-  <script>
-    new Vue({
-      el: '#vssue',
-
-      render: h => h('Vssue', {
-        props: {
-          // here set the title of issue of current page
-          title: 'Vssue Dev',
-
-          // here set the options for your OAuth App
-          options: {
-            owner: 'cycleguy22',
-            repo: 'website',
-            clientId: '21d1a5313bdc1d36e848',
-            clientSecret: 'a35244a4cf1000c7e8a86ee8b32e7ccce3d87a12', // only required for some of the platforms
-          },
-        }
-      })
-    })
-  </script>
-
+Hello world!
   
 </body>    
     
