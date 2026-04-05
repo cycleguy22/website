@@ -1,53 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- style sheet of Vssue -->
-  <link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css">
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
 </head>
-
 <body>
-Hello world!
-  
-  
-  <div id="graphcomment"></div>
-<script type="text/javascript">
 
-  /* - - - CONFIGURATION VARIABLES - - - */
+<h1>My Website</h1>
+<p>A website created by me.</p>
 
-  var __semio__params = {
-    graphcommentId: "test-site22", // make sure the id is yours
-
-    behaviour: {
-      // HIGHLY RECOMMENDED
-      //  uid: "...", // uniq identifer for the comments thread on your page (ex: your page id)
-    },
-
-    // configure your variables here
-
-  }
-
-  /* - - - DON'T EDIT BELOW THIS LINE - - - */
-
-  function __semio__onload() {
-    __semio__gc_graphlogin(__semio__params)
-  }
-
-
-  (function() {
-    var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
-    gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
-  })();
-  
-
-</script>
-  
-  
-</body>    
-    
-    
-    
-    
-    
+</body>
 </html>
