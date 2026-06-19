@@ -387,7 +387,7 @@ mapLink =
 L.tileLayer(
   'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; ' + mapLink + ' Contributors',
-    maxZoom: 18
+    maxZoom: 18,  "referrerPolicy": "no-referrer-when-downgrade",
   }).addTo(map);
 
 for (var i = 0; i < locations.length; i++) {
